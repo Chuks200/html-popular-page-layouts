@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Gmail Layout</title>
+<link rel="stylesheet" href="gmail.css">
+<style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "sidebar main-content"
+    "footer footer";
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: auto 1fr auto;
+  height: 100vh;
+}
+.header { background-color: #4285f4; grid-area: header; }
+.sidebar { background-color: #34a853; grid-area: sidebar; }
+.main-content { background-color: #fbbc05; grid-area: main-content; }
+.footer { background-color: #ea4335; grid-area: footer; }
+
+</style>
+</head>
+<body>
+<div class="header">Header</div>
+<div class="sidebar">Folders</div>
+<div class="main-content">Emails</div>
+<div class="footer">Footer</div>
+</body>
+</html>
